@@ -7,8 +7,8 @@ public class since1 {
 		int i = 1;
 		do {
 			System.out.println(i++);
-		}	while (i<=100);
-		
+		} while (i <= 100);
+
 	}
 
 }

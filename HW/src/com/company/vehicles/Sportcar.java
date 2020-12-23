@@ -5,13 +5,16 @@ import com.company.professions.Driver;
 
 public class Sportcar extends Car {
 	private double speed;
-	public Sportcar(String carClass, String model,double weight, Driver driver, Engine engine, double speed){
-		super(carClass,model,weight,driver,engine);
+
+	public Sportcar(String carClass, String model, double weight, Driver driver, Engine engine, double speed) {
+		super(carClass, model, weight, driver, engine);
 		setSpeed(speed);
-	}	
+	}
+
 	public double getSpeed() {
 		return speed;
 	}
+
 	public void setSpeed(double speed) {
 		this.speed = speed;
 	}

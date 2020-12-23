@@ -3,15 +3,10 @@ public class HelloWorld {
 
 	int x;
 	char y;
-			
+
 	public void Main() {
-		System.out.println(x+" a");
-		System.out.println(y+ " [ ] ch");
+		System.out.println(x + " a");
+		System.out.println(y + " [ ] ch");
 
 	}
 }
-
-
-
-
-

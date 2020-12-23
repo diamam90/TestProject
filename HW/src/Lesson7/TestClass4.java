@@ -6,9 +6,9 @@ public class TestClass4 {
 
 	public static void main(String[] args) {
 		System.out.println(TestClass1.a);// видно только паблик
-		//System.out.println(TestClass1.b); 
-		//System.out.println(TestClass1.c);
-		//System.out.println(TestClass1.d);
+		// System.out.println(TestClass1.b);
+		// System.out.println(TestClass1.c);
+		// System.out.println(TestClass1.d);
 
 	}
 

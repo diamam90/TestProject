@@ -1,15 +1,16 @@
 package Lesson10;
 
-public class Apricot extends Fruit{
+public class Apricot extends Fruit {
 	private double cost, price, weight;
 	private static double allCostApricot;
-	Apricot(double weight, double price){
-		this.weight=weight;
-		this.price=price;
+
+	Apricot(double weight, double price) {
+		this.weight = weight;
+		this.price = price;
 		numberOfFruit++;
-		allCostApricot+=weight*price;
+		allCostApricot += weight * price;
 	}
-	
+
 	public double getPrice() {
 		return price;
 	}
@@ -31,13 +32,12 @@ public class Apricot extends Fruit{
 	}
 
 	public double getCost() {
-		cost=price*weight;
+		cost = price * weight;
 		return cost;
 	}
 
 	public static double getAllCostApricot() {
 		return allCostApricot;
 	}
-	
+
 }
-             

@@ -2,9 +2,11 @@ package Lesson10;
 
 public class Book implements Printable {
 	private String name;
-	Book(String name){
-		this.name=name;
+
+	Book(String name) {
+		this.name = name;
 	}
+
 	public String getName() {
 		return name;
 	}
@@ -14,8 +16,9 @@ public class Book implements Printable {
 	}
 
 	public void print() {
-		System.out.println("Printing Book with name "+getName());
+		System.out.println("Printing Book with name " + getName());
 	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -23,6 +26,7 @@ public class Book implements Printable {
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -39,5 +43,5 @@ public class Book implements Printable {
 			return false;
 		return true;
 	}
-	
+
 }
