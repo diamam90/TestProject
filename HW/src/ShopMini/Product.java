@@ -1,7 +1,6 @@
 package ShopMini;
 
 public class Product {
-	private static int amount;
 	private String name;
 	private double price;
 	private double rate;
@@ -10,8 +9,7 @@ public class Product {
 	private int id;
 
 	Product(String name, double price, double rate) {
-		amount++;
-		id=amount;
+		id++;
 		this.name = name;
 		this.price = price;
 		this.rate = rate;
@@ -63,5 +61,8 @@ public class Product {
 
 	public void setTotalCost(double weight, double price) {
 		totalCost = weight * price;
+	}
+	public void printInfo() {
+		System.out.println(getName()+ " " + getPrice());
 	}
 }

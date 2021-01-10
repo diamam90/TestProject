@@ -1,20 +1,9 @@
 package ShopMini;
 import java.util.Scanner;
 public class ShopShop {
-	private static void categoryChoice(CatalogProducts[] categories) {
-		System.out.println("Выберите категорию товаров:");
-		for (CatalogProducts cat: categories) {
-			System.out.print(cat.getPosition() + " " + cat.getName() + " \t ");
-		}
-		System.out.println();
-		Scanner scanner =new Scanner(System.in);
-		if (scanner.hasNextInt()) {
-			int categoryChoice=scanner.nextInt();
-			categoryChoice--;
-			categories[categoryChoice].getProducts();
-		}
-	}
+	
 	public static void main(String[] args) {
+		int catChoice=0;
 		Product product1 = new Product("Домик в деревне 3.2% ", 60, 4.3);
 		Product product2 = new Product("Веселый молочник 3.2% ", 50, 4.10);
 		Product product3 = new Product("Волжаночка 2.5%", 50, 4.6);
@@ -33,37 +22,54 @@ public class ShopShop {
 		Product product13 = new Product("Miller", 65, 4.2);
 		Product product14 = new Product("Волжанин", 30, 2.5);
 		Product product15 = new Product("Пегас", 30, 2.4);
+		Product[] products= {product1,product2,product3,product4,product5,product6,product7,product8,product9,product10,product11,product12,product13,product14,product15};
 		
 		CatalogProducts category1 = new CatalogProducts ("Пиво", product11, product12, product13, product14, product15);
 		CatalogProducts category2 = new CatalogProducts ("Макароны", product7, product8, product9, product10);
 		CatalogProducts category3 = new CatalogProducts ("Молоко", product1, product2, product3);
 		CatalogProducts category4 = new CatalogProducts ("Мясо", product4, product5, product6);
 		CatalogProducts[] categories= {category1,category2,category3,category4};
-		
+		//
 		/*User user1 = new User();
 		User.printInfo(user1);*/
-		categoryChoice(categories);
-		/*System.out.println("Выберите товар");
-		Scanner scanner=new Scanner(System.in);
-		if (scanner.hasNextInt()) {
-			int productChoice=scanner.nextInt();
-			productChoice--;
-			;
-		switch (MeatSize) {
-			case SMALL: 
-				System.out.println("Вы на диете?!");
-				break;
-			case LARGE: 
-				System.out.println("Большому куску и рот радуется!");
-				break;	
-			case STANDART: 
-				System.out.println("Вы выбрали стандарную порцию");
-				break;
-			
-	}*/
 		
-	
-
-		}
+		
+		catChoice = categoryChoice(catChoice, categories);
+		
+		
+		productChoice(catChoice, categories);	
+		
 	}
+
+	private static void productChoice(int catChoice, CatalogProducts[] categories) {
+		System.out.println("Выберите товар");
+		Scanner scanner2=new Scanner(System.in);
+		if (scanner2.hasNextInt()){
+			int prodNum=scanner2.nextInt();
+			System.out.print("Вы выбрали: ");
+			categories[catChoice].printProduct(prodNum-1);
+		}
+		else {
+				System.out.println("Введите корректное число");
+			}
+	}
+
+	private static int categoryChoice(int catChoice, CatalogProducts[] categories) {
+		System.out.println("Выберите категорию товаров:");
+		System.out.println();
+		for (CatalogProducts cat: categories) {
+			System.out.print(cat.getNum() + " " + cat.getName() + " \t ");
+		}
+		System.out.println();
+		Scanner scanner =new Scanner(System.in);
+		if (scanner.hasNextInt()) {
+			catChoice=scanner.nextInt();
+			catChoice--;
+			categories[catChoice].getProducts();
+		}
+		else {System.out.println("Необходимо ввести число");}
+		return catChoice;
+	}		
+}
+	
 

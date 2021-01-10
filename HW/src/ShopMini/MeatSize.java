@@ -9,5 +9,17 @@ public enum MeatSize {
 	public double getWeight() {
 		return weight;
 	}
+	/*switch (MeatSize) {
+	case SMALL: 
+		System.out.println("Вы на диете?!");
+		break;
+	case LARGE: 
+		System.out.println("Большому куску и рот радуется!");
+		break;	
+	case STANDART: 
+		System.out.println("Вы выбрали стандарную порцию");
+		break;
 	
+}*/
+
 }

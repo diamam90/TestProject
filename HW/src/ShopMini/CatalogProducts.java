@@ -1,15 +1,17 @@
 package ShopMini;
 
 public class CatalogProducts {
-	private static int num=0;
-	private int position=0;
+	private static int amount=0;
+	private int num=0;
 	private String name;
 	private Product[] products;
 
 	CatalogProducts(String name, Product... products) {
 		this.name = name;
 		this.products = products;
-		position=num++;
+		amount++;
+		num=amount;
+		
 	}
 
 	public String getName() {
@@ -23,16 +25,16 @@ public class CatalogProducts {
 	public int getNum() {
 		return num;
 	}
-
-	public int getPosition() {
-		return position+1;
-	}
-
 	public void getProducts() {
 		System.out.println(getName());
+		int i=0;
 		for (Product prod:products) {
-			System.out.print(prod.getName()+" " +prod.getId()+ " \t ");
-		}
+			i++;
+			System.out.print(i + " " +prod.getName() + " \t ");
+			}
+		System.out.println();
 	}
-	
+	public void printProduct(int num) {
+		System.out.println(products[num].getName()+" "+ products[num].getPrice());
+	}
 }
