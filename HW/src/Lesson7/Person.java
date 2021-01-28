@@ -36,4 +36,11 @@ public class Person {
 	public Person() {
 
 	}
+
+	
+	@Override
+	public String toString() {
+		return	String.format("װָ־: %-10s, גמחנאסע: %-2d", fullName, age);
+	}
+	
 }
