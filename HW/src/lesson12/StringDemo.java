@@ -6,8 +6,6 @@ import java.util.regex.Pattern;
 public class StringDemo {
 
 	public static void main(String[] args) {
-		int[] x = new int[10];
-		int[] y = new int[10];
 		StringBuilder text = new StringBuilder("Object-oriented programming is a programming "
 				+ "language model organized\naround objects rather than \"actions\" and data rather than logic."
 				+ " object-oriented programming blabla.\nObject-oriented programming bla. "
@@ -20,7 +18,7 @@ public class StringDemo {
 		int i=1;
 		while (m.find()) {
 			if (i%2 ==0) {
-				m.appendReplacement(sb, "1");
+				m.appendReplacement(sb, newString);
 			}
 			i++;
 		}
