@@ -11,7 +11,7 @@ public class Employee {
 		this.fullName=fullName;
 	}
 	public String getFullName() {return fullName;}
-	public int getSalary() {return salary;}
+	public double getSalary() {return salary;}
 	public void setFullName(String name) {fullName=name;}
 	public void setSalary(int salary) {this.salary=salary;}
 	public static void main(String[] args) {
@@ -26,7 +26,7 @@ public class Employee {
 class Report{
 	public static void generationReport(Employee... emp) {
 		for (Employee e:emp) {
-		System.out.printf("ФИО сотрудника:%-15s, заработная плата:%,9d\n",e.getFullName(),e.getSalary());
+		System.out.printf("ФИО сотрудника:%-15s, заработная плата:%,12.2f\n",e.getFullName(),e.getSalary());
 		}
 	}
 }
