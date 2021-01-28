@@ -1,3 +1,4 @@
+
 package lesson12;
 
 public class StringBuilderDemo {
@@ -8,6 +9,7 @@ public class StringBuilderDemo {
 		System.out.println(createSomeString(4,28).toString());
 		modifySomeString(str1,"=", "равно");
 		modifySomeString(str1,"+", "плюс");
+		System.out.printf("HEllo world, %5s", 15);
 		
 	}
 	private static StringBuilder createSomeString(int a, int b) {
