@@ -50,7 +50,7 @@ public class Ex11 {
 			StringBuilder str2 = new StringBuilder();
 			str1.append(m.group());
 			str2.append(m.group()).reverse();
-			System.out.println(str1!=str2);
+			System.out.println(str1=str2);
 			}
 //			
 			
