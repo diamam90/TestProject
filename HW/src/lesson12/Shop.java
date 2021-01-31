@@ -41,7 +41,7 @@ class User {
 class Category {
 	private static int count;
 	private int id;
-	private int productNum[];
+	private int productId[];
 	Products[] product;
 	private String name;
 
