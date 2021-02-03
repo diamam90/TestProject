@@ -110,8 +110,9 @@ class Cart {
 	public void showCart() {
 		int i = 0;
 		System.out.println("У Вас в корзине:");
+		System.out.println("Продукт---------------Количество-----цена-------");
 		while (product[i] != null && i < 20) {
-			System.out.println(product[i].getName() + " x " + getNumProduct(i) + " шт.");
+			System.out.printf("%-20s %7s \t %10.2f \n" , product[i].getName(), getNumProduct(i), product[i].getPrice());
 			i++;
 		}
 	}
@@ -172,7 +173,7 @@ class Products {
 
 	@Override
 	public String toString() {
-		return  String.format("[%-20s, производитель = %-20s, рейтинг = %-3s, цена = %-6.2f] \n",name,manufacturer,rate,price);
+		return  String.format("[%-20s, производитель = %-20s, рейтинг = %-4s, цена = %-6.2f] \n",name,manufacturer,rate,price);
 	}
 
 }
@@ -237,8 +238,10 @@ public class Shop {
 				
 				cart1.addProduct(categories[cat-1].getProduct(prod-1),n);
 			}
+			System.out.println("------------------------------------------------");
 			cart1.showCart();
-			System.out.println("Итого: " + cart1.getTotalCost() + " руб.");
+			System.out.println("------------------------------------------------");
+			System.out.printf("%34s:  %-10.2f","Итого",cart1.getTotalCost());
 		}
 		
 	}
