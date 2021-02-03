@@ -29,9 +29,9 @@ public class ShopShop {
 		CatalogProducts category3 = new CatalogProducts ("Молоко", product1, product2, product3);
 		CatalogProducts category4 = new CatalogProducts ("Мясо", product4, product5, product6);
 		CatalogProducts[] categories= {category1,category2,category3,category4};
-		//
-		/*User user1 = new User();
-		User.printInfo(user1);*/
+		
+		User user1 = new User();
+		User.printInfo(user1);
 		
 		
 		catChoice = categoryChoice(catChoice, categories);
