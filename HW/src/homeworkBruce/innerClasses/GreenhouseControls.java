@@ -51,7 +51,7 @@ public class GreenhouseControls extends Controller{
 		public void action() {
 			addEvent(new Bell(delayTime));
 		}
-		public String toSTring() {return "БАМ!";}
+		public String toString() {return "Бам!";}
 	}
 	public class Restart extends Event{
 		private Event[] eventList;
@@ -71,7 +71,7 @@ public class GreenhouseControls extends Controller{
 			start();
 			addEvent(this);
 		}
-		public String toSTring() {return "Перезапуск системы";}
+		public String toString() {return "Перезапуск системы";}
 		}
 	public static class Terminate extends Event{
 		public Terminate(long delayTime) {super(delayTime);}
