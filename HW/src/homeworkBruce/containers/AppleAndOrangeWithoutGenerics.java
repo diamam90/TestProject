@@ -1,4 +1,4 @@
-package homeworkBruce.collection;
+package homeworkBruce.containers;
 import java.util.*;
 class Apple{
 	private static long counter;
