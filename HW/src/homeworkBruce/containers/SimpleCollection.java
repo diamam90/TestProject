@@ -11,5 +11,5 @@ public class SimpleCollection {
 			System.out.print(i+ ", ");
 		}
 	}
-
+	
 }
