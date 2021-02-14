@@ -6,7 +6,11 @@ public class PrintableDemo {
 		Book book2 = new Book("AZA");
 		Magazine magazine1 = new Magazine("123123");
 		Magazine magazine2 = new Magazine("123");
-		Printable[] printables = { book1, book2, magazine1, magazine2 };
+		
+		Printable newspaper = ()-> System.out.println("Print newspaper");
+		
+		
+		Printable[] printables = { book1, book2, magazine1, magazine2, newspaper };
 		for (Printable p : printables) {
 			p.print();
 		}

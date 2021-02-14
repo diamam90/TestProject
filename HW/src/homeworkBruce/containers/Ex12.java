@@ -12,7 +12,7 @@ public class Ex12 {
 		System.out.println();
 		List<Integer> list2 = new ArrayList<Integer>(list1.size());
 		ListIterator<Integer> iter1 = list1.listIterator(list1.size());
-		ListIterator<Integer> iter2 = list2.listIterator();
+		
 		
 		while (iter1.hasPrevious()) {
 //			System.out.print(iter1.previous()+ " ");
