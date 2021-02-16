@@ -14,7 +14,7 @@ public class ResouceBundleDemo2 {
 		 	Locale current = new Locale(language, country);
 			ResourceBundle rb = ResourceBundle.getBundle("topic", current);
 			for (String key:rb.keySet()) {
-				String value= rb.getString(key);
+				String value= rb.getString(key); 
 				System.out.println(value);
 			}
 			System.out.println();

@@ -4,7 +4,7 @@ public class LocaleDemo {
 	
 	public static void main(String[] args) {
 		
-		Locale.setDefault(Locale.JAPAN);
+		Locale.setDefault(Locale.CANADA_FRENCH);
 		Locale loc = Locale.getDefault();
 		System.out.println(loc.getDisplayCountry());
 		System.out.println(loc.getLanguage());
