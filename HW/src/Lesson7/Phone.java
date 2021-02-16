@@ -8,19 +8,19 @@ public class Phone {
 	private String number;
 	private double weight;
 
-	Phone(String m, String n, double w) {
+	public Phone(String m, String n, double w) {
 		this(n, m);
 		weight = w;
 
 	}
 
-	Phone(String m, String n) {
+	public Phone(String m, String n) {
 		model = m;
 		number = n;
 		count++;
 	}
 
-	Phone() {
+	public Phone() {
 		count++;
 	}
 
@@ -63,6 +63,11 @@ public class Phone {
 
 	static void membersOfClass() {
 		System.out.println("Количество телефонов: " + count);
+	}
+
+	@Override
+	public String toString() {
+		return " модель - " + model + ", номер - " + number + ", вес - " + weight + "]";
 	}
 
 }
