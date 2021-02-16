@@ -2,5 +2,7 @@ eclipse.preferences.version=1
 encoding//resources/information_en_US.properties=UTF-8
 encoding//resources/information_ru_Ru.properties=UTF-8
 encoding//resources/information_uk_UA.properties=UTF-8
+encoding//resources/shop.properties=UTF-8
+encoding//resources/shop_uk_UA.properties=UTF-8
 encoding//resources/topic.properties=UTF-8
 encoding//resources/topic_uk_UA.properties=UTF-8

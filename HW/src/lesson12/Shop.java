@@ -1,7 +1,10 @@
 package lesson12;
-
+import java.util.Locale;
+import java.util.ResourceBundle;
 import java.util.Scanner;
-
+import java.text.NumberFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 class User {
 	User(String login, String password) {
 		this.login = login;
@@ -107,14 +110,28 @@ class Cart {
 		return totalCost;
 	}
 
-	public void showCart() {
+	public void showCart(String language, String country) {
+		Locale current = new Locale(language,country);
+		ResourceBundle rb = ResourceBundle.getBundle("shop", current);
+		NumberFormat nb = NumberFormat.getInstance(current);
+		DateTimeFormatter dfm= DateTimeFormatter.ofPattern("dd,MMMM,yyyy", current);
+		LocalDate ld = LocalDate.now();
 		int i = 0;
-		System.out.println("У Вас в корзине:");
-		System.out.println("Продукт---------------Количество-----цена-------");
+		System.out.println("------------------------------------------------");
+		System.out.printf("%-30s %s\n",rb.getString("date"),ld.format(dfm));
+		System.out.printf("%s:\n", rb.getString("cartinfo"));
+		System.out.printf("%-18s %-18s %-10s\n",
+				rb.getString("productLanguage"),rb.getString("amountLanguage")
+				,rb.getString("priceLanguage"));
 		while (product[i] != null && i < 20) {
-			System.out.printf("%-20s %7s \t %10.2f \n" , product[i].getName(), getNumProduct(i), product[i].getPrice());
+			System.out.printf("%-20s %7s \t" , product[i].getName(),
+					getNumProduct(i));
+			System.out.printf("%10s \n",nb.format(product[i].getPrice()));
 			i++;
 		}
+		
+		System.out.println("------------------------------------------------");
+		System.out.printf("%31s:  %7s",rb.getString("totalLanguage"),nb.format(getTotalCost()));
 	}
 
 }
@@ -238,10 +255,8 @@ public class Shop {
 				
 				cart1.addProduct(categories[cat-1].getProduct(prod-1),n);
 			}
-			System.out.println("------------------------------------------------");
-			cart1.showCart();
-			System.out.println("------------------------------------------------");
-			System.out.printf("%34s:  %-10.2f","Итого",cart1.getTotalCost());
+			cart1.showCart("uk","UA");
+			
 		}
 		
 	}
