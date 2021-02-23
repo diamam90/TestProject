@@ -1,11 +1,25 @@
 package com.javastart.collections;
 
-public class CustomLinkedList<Element> {
+import java.util.Iterator;
+
+public class CustomLinkedList<Element> implements Iterable<Element> {
 	private Node<Element> first;
 	private Node<Element> last;
 	
 	private int size;
-	
+	public Iterator<Element> iterator(){
+		return new Iterator<Element>() {
+			private Node<Element> current = first;
+			public boolean hasNext() {
+				return current!=null;
+			};
+			public Element next() {
+				Node<Element> tmp = current;
+				current = current.next;
+				return tmp.item;
+			};
+		};
+	}
 	public void add(Element element) {
 		if (first == null) {
 			 Node<Element> node = new Node<>(element,null,null);

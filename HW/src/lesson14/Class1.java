@@ -17,8 +17,8 @@ public class Class1 {
 		}
 		System.out.println();
 		cll1.delete(2);
-		for (int i=0;i<cll1.size();i++) {
-			System.out.print(cll1.get(i)+ " ");
+		for (String e:cll1) {
+			System.out.print(e+" ");
 		}
 }
 }
