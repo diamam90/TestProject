@@ -13,6 +13,17 @@ public class ArrayListDemo {
 			System.out.println(p.getNumber());
 		}
 		phones.forEach(p->System.out.println(p.getModel()));
+		
+		List<String> array1 = new ArrayList<>();
+		List<String> array2 = Arrays.asList("1","2");
+		array1.add("A");
+		array1.add("B");
+		array1.add("C");
+		array1.add("D");
+		array1.add("E");
+		array1.add("F");
+		array1.addAll(3,array2);
+		System.out.println(array1);
 	}
 
 }
