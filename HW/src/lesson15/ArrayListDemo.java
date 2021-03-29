@@ -24,6 +24,8 @@ public class ArrayListDemo {
 		array1.add("F");
 		array1.addAll(3,array2);
 		System.out.println(array1);
+		array1.clear();
+		System.out.println(array1);
 	}
 
 }

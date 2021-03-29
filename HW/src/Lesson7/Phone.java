@@ -2,7 +2,7 @@ package Lesson7;
 
 import java.util.Arrays;
 
-public class Phone {
+public class Phone implements Comparable<Phone>{
 	static int count = 0;
 	private String model;
 	private String number;
@@ -64,10 +64,13 @@ public class Phone {
 	static void membersOfClass() {
 		System.out.println("Количество телефонов: " + count);
 	}
-
+	@Override
+	public int compareTo(Phone p) {
+		return Double.compare(p.weight, this.weight);
+	}
 	@Override
 	public String toString() {
-		return " модель - " + model + ", номер - " + number + ", вес - " + weight + "]";
+		return " модель - " + model + ", номер - " + number + ", вес - " + weight ;
 	}
 
 }
